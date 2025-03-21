@@ -12,7 +12,7 @@
 
 	const {
 		totalCustomer,
-		genderData,
+		sexData,
 		maritalStatusData,
 		incomeData,
 		settlementData,
@@ -23,7 +23,7 @@
 	$effect(() => {
 		new Chart(genderChart!, {
 			type: 'pie',
-			data: genderData,
+			data: sexData,
 			options: {
 				responsive: true,
 				maintainAspectRatio: false

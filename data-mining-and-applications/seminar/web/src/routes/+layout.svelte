@@ -48,7 +48,7 @@
 				{/each}
 			</div>
 			<div
-				class="flex h-full w-full overflow-y-auto rounded-md border-2 border-white/50 bg-white/40 px-12 py-6 shadow-md backdrop-blur-md"
+				class="relative flex h-full w-full overflow-clip rounded-md border-2 border-white/50 bg-white/40 px-12 py-6 shadow-md backdrop-blur-md"
 			>
 				{@render children()}
 			</div>

@@ -1,31 +1,11 @@
+import { PUBLIC_BASE_URL } from '$env/static/public';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
-	const analyticsData = {
-		datasets: [
-			{
-				label: 'Cluster A',
-				data: [
-					{
-						x: -10,
-						y: 0
-					},
-					{
-						x: 0,
-						y: 10
-					},
-					{
-						x: 10,
-						y: 5
-					},
-					{
-						x: 0.5,
-						y: 5.5
-					}
-				]
-			}
-		]
-	};
-
-	return { analyticsData };
+export const load: PageServerLoad = async ({ fetch }) => {
+	const response = await fetch(new URL('/api/v1/analytics', PUBLIC_BASE_URL));
+	if (response.ok) {
+		return {
+			analyticsData: await response.json()
+		};
+	}
 };

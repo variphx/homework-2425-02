@@ -3,8 +3,8 @@
 	import type { PageProps } from './$types';
 	import Chart from 'chart.js/auto';
 
-	let { form }: PageProps = $props();
-	const data = form?.data;
+	let { data }: PageProps = $props();
+	// const data = form?.data;
 
 	let chart = $state<HTMLCanvasElement>();
 
@@ -14,7 +14,7 @@
 		}
 		new Chart(chart!, {
 			type: 'bar',
-			data: data as {
+			data: data.data as {
 				labels: string[];
 				datasets: { label: string; data: number[] | [number, number][] }[];
 			}
@@ -40,13 +40,13 @@
 			<canvas bind:this={chart}></canvas>
 		</div>
 	{/if}
-	<form method="post" data-sveltekit-reload class="flex h-16 flex-col items-center justify-center">
+	<form data-sveltekit-reload class="flex h-16 flex-col items-center justify-center">
 		<div class="flex flex-row items-center justify-center gap-6">
 			<select
 				name="data-attribute"
 				id="data-attribute"
 				class="rounded-md border-2 border-white/50 bg-white/40 shadow-md backdrop-blur-md"
-				value={form?.dataAttribute ? form.dataAttribute : dataAtrributeOptions[0].value}
+				value={data.dataAttribute ? data.dataAttribute : dataAtrributeOptions[0].value}
 			>
 				{#each dataAtrributeOptions as option (option.value)}
 					<option value={option.value}>{option.display}</option>

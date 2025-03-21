@@ -1,10 +1,31 @@
 import { error } from '@sveltejs/kit';
-import type { Actions } from './$types';
+import type { Actions, PageServerLoad } from './$types';
+import { PUBLIC_BASE_URL } from '$env/static/public';
+
+export const load: PageServerLoad = async ({ fetch, url }) => {
+	const dataAttribute = url.searchParams.get('data-attribute');
+	if (!dataAttribute) {
+		const response = await fetch(new URL(`/api/v1/details/age`, PUBLIC_BASE_URL));
+		if (response.ok) {
+			return await response.json();
+		}
+	}
+
+	const response = await fetch(new URL(`/api/v1/details/${dataAttribute}`, PUBLIC_BASE_URL));
+	if (response.ok) {
+		return await response.json();
+	}
+};
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	default: async ({ request, fetch }) => {
 		const formData = await request.formData();
 		const dataAttribute = formData.get('data-attribute')!.toString();
+
+		const response = await fetch(new URL(`/api/v1/details/${dataAttribute}`, PUBLIC_BASE_URL));
+		if (response.ok) {
+			return await response.json();
+		}
 
 		interface Data {
 			labels: string[];
