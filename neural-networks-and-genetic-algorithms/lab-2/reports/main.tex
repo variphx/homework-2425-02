@@ -185,7 +185,7 @@ Tuy vậy, độ ổn định của DE ở bài toán benchmark này lại vư�
 
 Độ chính xác của giải pháp cuối cùng của DE so với CEM nhỉnh hơn đôi phần khi số chiều là 2 nhưng đa phần đều không được ủng hộ khi được kiểm định với giả thuyết thống kê. Ngược lại, kết quả của thực nghiệm với số chiều bằng 10 đều được giả thuyết thống kê ủng hộ và cho thấy giải pháp của DE sẽ chính xác hơn nhưng chỉ với N nhỏ hơn 64; với N bằng 64 hoặc 128, DE không được hiệu quả bằng CEM.
 
-\section{Thực nghiệm với hàm mục tiêu Rastrigin}
+\section{Thực nghiệm với hàm benchmark Rastrigin}
 \begin{figure}[H]\centering
 	\label{figure:rastrigin_comparison}
 	\caption{Biểu đồ hội tụ của hai thuật toán với hàm Rastrigin với \(N = 32 \wedge d \in \{2; 10\}\)}
@@ -198,7 +198,7 @@ Tuy vậy, độ ổn định của DE ở bài toán benchmark này lại vư�
 \end{figure}
 
 \begin{table}[H]\centering
-	\caption{Bảng so sánh thực nghiệm sử dụng hàm mục tiêu Rastrigin}
+	\caption{Bảng so sánh thực nghiệm sử dụng hàm benchmark Rastrigin}
 	\begin{tabularx}{0.8\textwidth}{p{5em}XXl}
 		\toprule
 		\textbf{N} & \textbf{DE}                 & \textbf{CEM}        & \textbf{p-value}   \\
@@ -228,7 +228,7 @@ Tốc độ hội tụ của DE trong bài benchmark Griewank thực sự vượ
 
 Tính chính xác của giải pháp cuối cùng vẫn vượt trội hơn về phần DE với mọi điều kiện thử nghiệm và hầu hết đều được ủng hộ bởi kiểm định giả thuyết thống kê.
 
-\section{Thực nghiệm với hàm mục tiêu Griewank}
+\section{Thực nghiệm với hàm benchmark Griewank}
 \begin{figure}[H]\centering
 	\caption{Biểu đồ hội tụ của hai thuật toán với hàm Griewank với \(N = 32 \wedge d \in \{2; 10\}\)}
 	\begin{minipage}{0.45\textwidth}\centering
@@ -240,7 +240,7 @@ Tính chính xác của giải pháp cuối cùng vẫn vượt trội hơn về
 \end{figure}
 
 \begin{table}[H]\centering
-	\caption{Bảng so sánh thực nghiệm sử dụng hàm mục tiêu Griewank}
+	\caption{Bảng so sánh thực nghiệm sử dụng hàm benchmark Griewank}
 	\begin{tabularx}{0.8\textwidth}{p{5em}XXl}
 		\toprule
 		\textbf{N} & \textbf{DE}                & \textbf{CEM}        & \textbf{p-value} \\
@@ -266,7 +266,7 @@ Tính chính xác của giải pháp cuối cùng vẫn vượt trội hơn về
 
 Với bài benchmark Griewank, CEM gần như không có hiệu quả. DE vẫn ổn định nếu không muốn nói là rất phù hợp cho bài toán này.
 
-\section{Thực nghiệm với hàm mục tiêu Ackley}
+\section{Thực nghiệm với hàm benchmark Ackley}
 \begin{figure}[H]\centering
 	\caption{Biểu đồ hội tụ của hai thuật toán với hàm Ackley với \(N = 32 \wedge d \in \{2; 10\}\)}
 	\begin{minipage}{0.45\textwidth}\centering
@@ -278,7 +278,7 @@ Với bài benchmark Griewank, CEM gần như không có hiệu quả. DE vẫn 
 \end{figure}
 
 \begin{table}[H]\centering
-	\caption{Bảng so sánh thực nghiệm sử dụng hàm mục tiêu Ackley}
+	\caption{Bảng so sánh thực nghiệm sử dụng hàm benchmark Ackley}
 	\begin{tabularx}{0.8\textwidth}{p{5em}XXl}
 		\toprule
 		\textbf{N} & \textbf{DE}                & \textbf{CEM}       & \textbf{p-value}   \\

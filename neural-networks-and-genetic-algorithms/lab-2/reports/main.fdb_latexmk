@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743779139.71361 "/home/variphx/homework-2425-02/neural-networks-and-genetic-algorithms/lab-2/reports/main.tex" "main.pdf" "main" 1743779140.77049 0
+["pdflatex"] 1743779459.6091 "/home/variphx/homework-2425-02/neural-networks-and-genetic-algorithms/lab-2/reports/main.tex" "main.pdf" "main" 1743779460.67762 0
   "../assets/graphs/objective=Ackley_N=32_d=10.png" 1743776289.34835 59835 aedd863a82a31ff6ecaddbc607d8e5aa ""
   "../assets/graphs/objective=Ackley_N=32_d=2.png" 1743776264.88058 41897 436de7b9e75859172c7ff4a636143c73 ""
   "../assets/graphs/objective=Griewank_N=32_d=10.png" 1743776177.52475 37738 6efeceedf326f59e729bdccdf4e0f98e ""
@@ -10,7 +10,7 @@
   "../assets/graphs/objective=Rosenbrock_N=32_d=2.png" 1743776193.79267 32759 43aec2f6a01391dd293286027bc8d0c8 ""
   "../assets/graphs/objective=Sphere_N=32_d=10.png" 1743776140.00975 36180 0b75f41182d30ebf1a5ac4bd95d22e60 ""
   "../assets/graphs/objective=Sphere_N=32_d=2.png" 1743776121.43141 34054 04c1baa94a7ae1c598fb1b08ca65afe6 ""
-  "/home/variphx/homework-2425-02/neural-networks-and-genetic-algorithms/lab-2/reports/main.tex" 1743779138.57684 19306 1b3b06523860913a6a2c54475f5ca42b ""
+  "/home/variphx/homework-2425-02/neural-networks-and-genetic-algorithms/lab-2/reports/main.tex" 1743779458.45676 19294 620e0c97de3b57c8405284bc376ef185 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1742685315 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -110,10 +110,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1743335690 5467117 e063ce8e53b0cc3d0312473583ebc51c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1743335662 3459356 74ea332be9f7eb3c202a44aa97ccfa98 ""
   "assets/uit_logo.eps" 1743648981.97374 972702 73741e6d68e71e121211e18367e3a52d ""
-  "main.aux" 1743779140.67081 4364 8af496c95639342f68f73ef9a352835c "pdflatex"
-  "main.out" 1743779140.67181 1804 73e22ec10c23bf9f08de5fb9bdec9cc9 "pdflatex"
-  "main.tex" 1743779138.57684 19306 1b3b06523860913a6a2c54475f5ca42b ""
-  "main.toc" 1743779140.67181 850 80d4f4e1542d4a232faa79e5c9a264fc "pdflatex"
+  "main.aux" 1743779460.58272 4350 1d39a6789e8d8b219551462d22d75307 "pdflatex"
+  "main.out" 1743779460.58372 1792 e28cf8888890c164719c50459f9598d7 "pdflatex"
+  "main.tex" 1743779458.45676 19294 620e0c97de3b57c8405284bc376ef185 ""
+  "main.toc" 1743779460.58472 844 19fb6dca00743e092d84e5daeb8aa6f7 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
