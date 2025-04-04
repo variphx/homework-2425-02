@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.30)  4 APR 2025 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.30)  4 APR 2025 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,13 +632,7 @@ File: ../assets/graphs/objective=Sphere_N=32_d=10.png Graphic file (type png)
 Package pdftex.def Info: ../assets/graphs/objective=Sphere_N=32_d=10.png  used 
 on input line 110.
 (pdftex.def)             Requested size: 204.85846pt x 153.64174pt.
-
-
-[3
-
- <../assets/graphs/objective=Sphere_N=32_d=2.png> <../assets/graphs/objective=S
-phere_N=32_d=10.png>]
-<../assets/graphs/objective=Rosenbrock_N=32_d=2.png, id=94, 578.16pt x 433.62pt
+<../assets/graphs/objective=Rosenbrock_N=32_d=2.png, id=85, 578.16pt x 433.62pt
 >
 File: ../assets/graphs/objective=Rosenbrock_N=32_d=2.png Graphic file (type png
 )
@@ -646,7 +640,7 @@ File: ../assets/graphs/objective=Rosenbrock_N=32_d=2.png Graphic file (type png
 Package pdftex.def Info: ../assets/graphs/objective=Rosenbrock_N=32_d=2.png  us
 ed on input line 150.
 (pdftex.def)             Requested size: 204.85846pt x 153.64174pt.
-<../assets/graphs/objective=Rosenbrock_N=32_d=10.png, id=95, 578.16pt x 433.62p
+<../assets/graphs/objective=Rosenbrock_N=32_d=10.png, id=86, 578.16pt x 433.62p
 t>
 File: ../assets/graphs/objective=Rosenbrock_N=32_d=10.png Graphic file (type pn
 g)
@@ -654,6 +648,12 @@ g)
 Package pdftex.def Info: ../assets/graphs/objective=Rosenbrock_N=32_d=10.png  u
 sed on input line 153.
 (pdftex.def)             Requested size: 204.85846pt x 153.64174pt.
+
+
+[3
+
+ <../assets/graphs/objective=Sphere_N=32_d=2.png> <../assets/graphs/objective=S
+phere_N=32_d=10.png>]
 <../assets/graphs/objective=Rastrigin_N=32_d=2.png, id=98, 578.16pt x 433.62pt>
 
 File: ../assets/graphs/objective=Rastrigin_N=32_d=2.png Graphic file (type png)
@@ -708,10 +708,10 @@ on input line 276.
 
 
 [6 <../assets/graphs/objective=Griewank_N=32_d=2.png> <../assets/graphs/objecti
-ve=Griewank_N=32_d=10.png>]
+ve=Griewank_N=32_d=10.png> <../assets/graphs/objective=Ackley_N=32_d=2.png> <..
+/assets/graphs/objective=Ackley_N=32_d=10.png>]
 
-[7 <../assets/graphs/objective=Ackley_N=32_d=2.png> <../assets/graphs/objective
-=Ackley_N=32_d=10.png>]
+[7]
 Ch\uhorn \ohorn ng 3.
 
 
@@ -729,12 +729,12 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8C09BDA51E6435B28D5904354C25E5E4;1851.
+(rerunfilecheck)             Checksum: 73E22EC10C23BF9F08DE5FB9BDEC9CC9;1804.
  ) 
 Here is how much of TeX's memory you used:
  11276 strings out of 473190
  178594 string characters out of 5722593
- 601134 words of memory out of 5000000
+ 606134 words of memory out of 5000000
  34357 multiletter control sequences out of 15000+600000
  574718 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -749,10 +749,10 @@ ype1/vntex/vnr/vnbx12.pfb></usr/share/texmf-dist/fonts/type1/vntex/vnr/vnr10.pf
 b></usr/share/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/share/texmf-dist
 /fonts/type1/vntex/vnr/vnr17.pfb></usr/share/texmf-dist/fonts/type1/vntex/vnr/v
 nti10.pfb></usr/share/texmf-dist/fonts/type1/vntex/vnr/vntt10.pfb>
-Output written on main.pdf (10 pages, 574529 bytes).
+Output written on main.pdf (10 pages, 574188 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 213 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  31 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
