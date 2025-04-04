@@ -198,11 +198,9 @@ for fitness_fn_builder in (Sphere, Griewank, Rosenbrock, Rastrigin, Ackley):
     )
     y = x
     X, Y = np.meshgrid(x, y)
-    print(X.shape, Y.shape)
     X_flatten = X.reshape(100**2, copy=False)
     Y_flatten = Y.reshape(100**2, copy=False)
     XY_flatten = np.concat((X_flatten[:, np.newaxis], Y_flatten[:, np.newaxis]), axis=1)
-    print(XY_flatten.shape)
     Z = np.apply_along_axis(fitness_fn, axis=1, arr=XY_flatten).reshape(
         (100, 100), copy=False
     )
