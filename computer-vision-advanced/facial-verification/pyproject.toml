@@ -1,0 +1,17 @@
+[project]
+name = "facial-verification"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "onnxruntime",
+    "insightface",
+    "faiss-cpu",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
