@@ -15,7 +15,7 @@ app = FastAPI()
 
 FACE_ANALYZER = FaceAnalyzer()
 RELATIONAL_DB_CONN = sqlite3.connect("sqlite.db")
-VECTOR_DB_PERSIST_DIR = str(Path(__file__).parent.joinpath("chromadb"))
+VECTOR_DB_PERSIST_DIR = str(Path(__file__).parent.joinpath("chroma"))
 
 RELALTIONAL_DB = RelationalDb(RELATIONAL_DB_CONN)
 VECTOR_DB = VectorDb(VECTOR_DB_PERSIST_DIR)
@@ -37,5 +37,5 @@ async def predict(file: UploadFile):
     name = RELALTIONAL_DB.fetch({"rowid": rowid, "get_name": True})["name"]
     end_ts = time.time_ns()
     x1, y1, x2, y2 = face["bbox"]
-    bbox = [(x1 + x2) // 2, (y1 + y2) // 2, x2 - x1, y2 - y1]
+    bbox = [(x1 + x2) // 2, (y1 + y2) // 2, int(x2 - x1), int(y2 - y1)]
     return {"label": name, "bbox": bbox, "time": (end_ts - start_ts)}

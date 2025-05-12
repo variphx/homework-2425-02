@@ -36,7 +36,7 @@ class FaceAnalyzer(AbstractFaceAnalyzer):
         for output in outputs:
             face: Face = {
                 "embeddings": output["embedding"],
-                "bbox": output["bbox"],
+                "bbox": output["bbox"].tolist(),
                 "src": src,
                 "name": name,
             }
