@@ -36,4 +36,6 @@ async def predict(file: UploadFile):
     rowid = int(VECTOR_DB.query({"embeddings": face["embeddings"], "top_k": 1})[0][0])
     name = RELALTIONAL_DB.fetch({"rowid": rowid, "get_name": True})["name"]
     end_ts = time.time_ns()
-    return {"name": name, "time": end_ts - start_ts}
+    x1, y1, x2, y2 = face["bbox"]
+    bbox = [(x1 + x2) // 2, (y1 + y2) // 2, x2 - x1, y2 - y1]
+    return {"label": name, "bbox": bbox, "time": (end_ts - start_ts)}

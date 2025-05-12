@@ -34,7 +34,12 @@ class FaceAnalyzer(AbstractFaceAnalyzer):
         faces = []
         outputs = self._analyzer.get(image)
         for output in outputs:
-            face: Face = {"embeddings": output["embedding"], "src": src, "name": name}
+            face: Face = {
+                "embeddings": output["embedding"],
+                "bbox": output["bbox"],
+                "src": src,
+                "name": name,
+            }
             faces.append(face)
 
         return faces

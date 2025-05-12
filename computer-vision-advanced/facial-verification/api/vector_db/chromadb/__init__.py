@@ -4,7 +4,6 @@ import numpy as np
 import chromadb
 from pathlib import Path
 from typing import TypedDict
-from dataclasses import dataclass
 
 
 class Value(TypedDict):
@@ -12,7 +11,6 @@ class Value(TypedDict):
     rowid: str
 
 
-@dataclass
 class QueryRequest(TypedDict):
     embeddings: np.typing.NDArray[np.float32]
     top_k: int = 5

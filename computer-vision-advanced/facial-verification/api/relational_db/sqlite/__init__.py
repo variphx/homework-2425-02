@@ -1,18 +1,15 @@
 import sqlite3
 from typing import TypedDict
-from dataclasses import dataclass
 
 from common.face import Face
 
 
-@dataclass
 class FetchRequest(TypedDict):
     rowid: int
     get_name: bool = False
     get_src: bool = False
 
 
-@dataclass
 class FetchResult(TypedDict):
     name: str | None = None
     src: str | None = None
