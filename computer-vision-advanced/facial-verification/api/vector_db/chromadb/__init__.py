@@ -25,12 +25,12 @@ class VectorDb(AbstractVectorDb):
 
         self._collection = self._client.create_collection("faces")
 
-    def insert(self, values: list[Value]):
+    async def insert(self, values: list[Value]):
         ids = [x["rowid"] for x in values]
         embeddings = [x["embeddings"] for x in values]
         self._collection.add(ids=ids, embeddings=embeddings)
 
-    def query(self, request: QueryRequest) -> list[list[str]]:
+    async def query(self, request: QueryRequest) -> list[list[str]]:
         results = self._collection.query(
             query_embeddings=request["embeddings"],
             n_results=request["top_k"],

@@ -14,16 +14,18 @@ class FaceAnalyzer(AbstractFaceAnalyzer):
             self._analyzer = analyzer
             return
 
-        self._analyzer = insightface.app.FaceAnalysis()
+        self._analyzer = insightface.app.FaceAnalysis(
+            providers=["CUDAExecutionProvider"]
+        )
         self._analyzer.prepare(ctx_id=1)
 
-    def analyze(
+    async def analyze(
         self,
         *,
         src: str | Path | None = None,
         io: BinaryIO | None = None,
         name: str | None = None,
-    ) -> list[Face]:
+    ):
         if src:
             image = Image.open(src)
         if io:
@@ -31,15 +33,15 @@ class FaceAnalyzer(AbstractFaceAnalyzer):
 
         image = np.array(image, dtype=np.uint8)
 
-        faces = []
         outputs = self._analyzer.get(image)
         for output in outputs:
-            face: Face = {
-                "embeddings": output["embedding"],
-                "bbox": output["bbox"].tolist(),
-                "src": src,
-                "name": name,
-            }
-            faces.append(face)
+            face = Face(
+                {
+                    "embeddings": output["embedding"],
+                    "bbox": output["bbox"].astype(np.int64).tolist(),
+                    "src": src,
+                    "name": name,
+                }
+            )
 
-        return faces
+            yield face

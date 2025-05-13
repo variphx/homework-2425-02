@@ -8,9 +8,10 @@ dependencies = [
     "numpy",
     "chromadb",
     "insightface",
-    "onnxruntime",
+    "onnxruntime-gpu",
     "opencv-python",
     "pillow",
     "fastapi[standard]",
     "python-multipart",
+    "websocket",
 ]

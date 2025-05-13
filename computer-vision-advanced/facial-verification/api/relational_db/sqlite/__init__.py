@@ -10,6 +10,12 @@ class FetchRequest(TypedDict):
     get_src: bool = False
 
 
+class FetchManyRequest(TypedDict):
+    rowids: int
+    get_name: bool = False
+    get_src: bool = False
+
+
 class FetchResult(TypedDict):
     name: str | None = None
     src: str | None = None
@@ -27,7 +33,7 @@ CREATE TABLE IF NOT EXISTS faces (
 """
         )
 
-    def insert(self, face: Face) -> tuple[int]:
+    async def insert(self, face: Face) -> tuple[int]:
         rowid = self._cursor.execute(
             """
 INSERT INTO faces (name, src) VALUES (?, ?) RETURNING rowid
@@ -37,7 +43,7 @@ INSERT INTO faces (name, src) VALUES (?, ?) RETURNING rowid
 
         return rowid
 
-    def fetch(self, request: FetchRequest) -> FetchResult:
+    async def fetch(self, request: FetchRequest) -> FetchResult:
         if request.get("get_name", False) and request.get("get_src", False):
             name, src = self._cursor.execute(
                 """
@@ -48,7 +54,7 @@ SELECT name, src FROM faces WHERE rowid = ?
 
             return {"name": name, "src": src}
 
-        if request["get_name"]:
+        if request.get("get_name", False):
             name = self._cursor.execute(
                 """
 SELECT name FROM faces WHERE rowid = ?
@@ -58,7 +64,7 @@ SELECT name FROM faces WHERE rowid = ?
 
             return {"name": name}
 
-        if request["get_src"]:
+        if request.get("get_src", False):
             src = self._cursor.execute(
                 """
 SELECT src FROM faces WHERE rowid = ?
@@ -66,7 +72,7 @@ SELECT src FROM faces WHERE rowid = ?
                 (request["rowid"],),
             ).fetchone()
 
-            return {"src": name}
+            return {"src": src}
 
         raise ValueError(
             "`FetchRequest` must have either `get_name` or `get_src` set to True"
