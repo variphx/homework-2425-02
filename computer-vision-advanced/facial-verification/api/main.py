@@ -56,7 +56,7 @@ async def predictions(file: UploadFile):
     return predictions
 
 
-@app.websocket("/ws")
+@app.websocket("/ws/predictions")
 async def endpoint(websocket: WebSocket):
     await websocket.accept()
     while True:

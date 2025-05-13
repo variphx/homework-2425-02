@@ -7,7 +7,7 @@ from typing import TypedDict
 
 
 class QueryOutput(TypedDict):
-    name: str
+    label: str
     score: str
 
 
@@ -58,7 +58,7 @@ class Db(AbstractDb):
                 (output,) = output
                 yield QueryOutput(
                     {
-                        "name": output["entity"]["name"],
+                        "label": output["entity"]["name"],
                         "bbox": bbox,
                         "score": output["distance"],
                     }
@@ -68,5 +68,5 @@ class Db(AbstractDb):
             for output in output:
                 (output,) = output
                 yield QueryOutput(
-                    {"name": output["entity"]["name"], "score": output["distance"]}
+                    {"label": output["entity"]["name"], "score": output["distance"]}
                 )
